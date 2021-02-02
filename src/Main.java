@@ -6,8 +6,24 @@ public class Main {
 
         List<String> movieList = List.of("Daredevil", "Matrix", "Gudfadern");
         //movieList.stream().filter();
-        String matrix =findByString(movieList, "Matrix");
-        System.out.println(matrix);
+        //String matrix =findByString(movieList, "Matrix");
+        //System.out.println(matrix);
+
+        String shortestMovie = findShortestString(movieList);
+        System.out.println(shortestMovie);
+    }
+
+    private static String findShortestString(List<String> movieList) {
+        String result = null;
+        int shortestMovie = 500;
+
+        for (String m : movieList) {
+            if (m.length() < shortestMovie ) {
+               result = m;
+                break;
+            }
+        }
+        return result;
     }
 
     private static String findByString(List<String> movieList, String str) {
