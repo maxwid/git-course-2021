@@ -15,12 +15,11 @@ public class Main {
 
     private static String findShortestString(List<String> movieList) {
         String result = null;
-        int shortestMovie = 500;
+        String shortestMovie = "abrakadabrsdasdsadadadsadasdasdasdadaa";
 
         for (String m : movieList) {
-            if (m.length() < shortestMovie ) {
+            if (m.length() <= shortestMovie.length() ) {
                result = m;
-                break;
             }
         }
         return result;
